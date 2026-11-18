@@ -15,8 +15,8 @@ This separate repository tracks the Smtlink 3 project.
 Setting your *ACL2_HOME* environment variable to your ACL2 sources should allow the targets to build.
 
 ### The Makefile has two targets:
-The *top* target builds the Smtlink 3 books.
-The *example* target runs the proofs from the paper.
+- The *top* target builds the Smtlink 3 books. This is the default.
+- The *example* target runs the proofs from the paper.
 
 ## Loading Smtlink
 
