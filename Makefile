@@ -14,6 +14,20 @@ ACL2_BUILD_DIR ?= $(ACL2_SYSTEM_BOOKS)/build
 
 JOBS ?= 8
 
+# Run some forms, then read from stdin.
+define PRELOADREPL
+(                                                                                                       \
+  echo;                                                                                                 \
+  printf '%s\n' "(include-book \"hints/hint-wrapper\" :dir :system)";                                   \
+  printf '%s\n' "(add-default-hints '((hint-wrapper-hint clause)))";                                    \
+  printf '%s\n' "(include-book \"top\")";                                                               \
+  printf '%s\n' "(add-default-hints '((SMT::SMT-computed-hint clause stable-under-simplificationp)))";  \
+  printf '%s\n' "(value-triple (tshell-ensure))";                                                       \
+  printf '%s\n' "(car (strip-cars (global-val 'include-book-alist (w state))))";                        \
+  cat;                                                                                                  \
+)
+endef
+
 all: top
 
 top:
@@ -28,3 +42,6 @@ example:
 clean:
 	$(ACL2_BUILD_DIR)/clean.pl
 	rm -rf manual
+
+repl:
+	$(PRELOADREPL) | $(ACL2)
