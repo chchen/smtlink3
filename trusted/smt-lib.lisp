@@ -61,7 +61,7 @@
         (cons 'rational-* 'acl2::|*|)
         (cons 'rational-< 'acl2::|<|)
         (cons 'rational-/ 'acl2::|/|)
-        (cons 'int-to-rat 'acl2::|to_real|)))
+        (cons 'acl2::int-to-rat 'acl2::|to_real|)))
 
 ;; Partial support, no exponents, division, or modulus
 (defconst *SMT-Ints*
