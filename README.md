@@ -49,14 +49,24 @@ This is a nonlinear inequality example originally from the [Smtlink 2.0 paper](h
 
 Say you have a system of nonlinear inequalities. Given these two inequalities:
 
-```(<= (+ (* (/ 9 8) x x) (* y y)) 1)```
 ![A plot of a green area inside a hyperbola](docimages/hyperbola.png)
+```
+(<= (+ (* (/ 9 8)
+          x
+	  x)
+       (* y y))
+     1)
+```
 
-```(<= (x^2-y^2 x y) 1)```
 ![A plot of a blue area inside a ovaloid](docimages/ovaloid.png)
+```
+(<= (x^2-y^2 x y)
+    1)
+```
 
 Can we presume the following?
 
+![A plot of a purple area beneath a parabola](docimages/parabola.png)
 ```
 (< y
    (- (* 3
@@ -64,7 +74,6 @@ Can we presume the following?
          (- x (/ 17 8)))
       3))
 ```
-![A plot of a purple area beneath a parabola](docimages/parabola.png)
 
 ACL2 is unable to prove the theorem directly, even with the nonlinear support in `arithmetic-5`:
 
