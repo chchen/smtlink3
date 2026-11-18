@@ -4,7 +4,8 @@
 
 *Smtlink 3* is a framework for translating ACL2 proof goals to SMT-LIB for external proof. It uses the ACL2 rewriter for verified type inference and term rewriting.
 
-It extends Peng and Greenstreet's [Smtlink 2.0](https://doi.org/10.4204/eptcs.280.11).
+Presented at the [ACL2 2026 Workshop](https://www.cs.utexas.edu/~moore/acl2/workshop-2026/index.html).
+Smtlink 3 extends Peng and Greenstreet's [Smtlink 2.0](https://doi.org/10.4204/eptcs.280.11) with type inference and rewrite-driven compilation to [SMT-LIB](https://smt-lib.org/).
 
 ## Requirements
 
