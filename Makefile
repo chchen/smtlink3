@@ -12,7 +12,7 @@ ACL2 ?= $(ACL2_HOME)/saved_acl2
 ACL2_SYSTEM_BOOKS ?= $(ACL2_HOME)/books
 ACL2_BUILD_DIR ?= $(ACL2_SYSTEM_BOOKS)/build
 
-JOBS ?= 3
+JOBS ?= 8
 
 all: top
 

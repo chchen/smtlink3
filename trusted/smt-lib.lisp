@@ -254,10 +254,9 @@
     :returns (rv true-listp)
     (b* ((s (smt-judgement-fix s))
          (vs (smt-judgement->vars s)))
-      (cons `(acl2::|set-logic| acl2::aufnira)
-            (append (smt-judgement->declare-sort-list s)
-                    (smt-judgement->declare-fun-list s)
-                    (var-judgements->declare-const-list vs))))
+      (append (smt-judgement->declare-sort-list s)
+              (smt-judgement->declare-fun-list s)
+              (var-judgements->declare-const-list vs)))
     ///
     (fty::deffixequiv smt-judgement->preamble))
   )
