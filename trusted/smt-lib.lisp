@@ -68,7 +68,8 @@
   (list (cons 'integer-- 'acl2::|-|)
         (cons 'integer-+ 'acl2::|+|)
         (cons 'integer-* 'acl2::|*|)
-        (cons 'integer-< 'acl2::|<|)))
+        (cons 'integer-< 'acl2::|<|)
+        (cons 'integer-expt 'acl2::|**|)))
 
 ;; Arrays
 (defconst *SMT-ArraysEx*
